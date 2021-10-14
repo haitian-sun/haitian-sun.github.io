@@ -1,1 +1,301 @@
-conditionalqa homepage
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@qi2peng2">
+    <meta name="twitter:creator" content="@qi2peng2">
+    <meta name="twitter:title" content="ConditionalQA: A Dataset for Complex Questions with Conditional Answers">
+    <meta name="twitter:description" content="ConditionalQA is a question answering dataset featuring complex questions with conditional answers, i.e. answers are only applicable if certain conditions apply. Inaddition to conditional answers, ConditionalQA also features: (1) long context documents with information that is related in logically complex ways; (2) multi-hop questions that require compositional logical reasoning; (3) a com-bination of extractive questions, yes/no ques-tions, questions with multiple answers, and not-answerable questions; (4) questions asked without knowing the answers. ">
+    <!-- <meta name="twitter:image" content="https://hotpotqa.github.io/img/question_types.png"> -->
+    <!-- <meta property="og:image" content="https://hotpotqa.github.io/img/question_types.png"> -->
+
+    <title>ConditionalQA Homepage</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="css/hotpotqa.css" rel="stylesheet">
+
+<meta name="google-site-verification" content="h3zCtOJy9KzG1XWf5-3ppU1liaJ8NkpGvK_BbOOq3-4" />
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org/",
+  "@type":"Dataset",
+  "name":"ConditionalQA: A Dataset for Complex Questions with Conditional Answers",
+  "description":"ConditionalQA is a question answering dataset featuring complex questions with conditional answers, i.e. answers are only applicable if certain conditions apply. Inaddition to conditional answers, ConditionalQA also features: (1) long context documents with information that is related in logically complex ways; (2) multi-hop questions that require compositional logical reasoning; (3) a com-bination of extractive questions, yes/no ques-tions, questions with multiple answers, and not-answerable questions; (4) questions asked without knowing the answers. ",
+  "url":"https://haitian-sun.github.io/conditionalqa",
+  "keywords":[
+     "Question Answering",
+     "Natural Language Processing",
+     "Logical Reasoning",
+     "Artificial Intelligence"
+  ],
+  "creator":{
+     "@type":"Organization",
+     "url": "https://haitian-sun.github.io/conditionalqa",
+     "name":"Carnegie Mellon University, Google Research",
+     "contactPoint":{
+        "@type":"ContactPoint",
+        "contactType": "customer service",
+        "url":"https://haitian-sun.github.io",
+        "email":"haitians@cs.cmu.edu"
+     }
+  },
+  "distribution":[
+     {
+        "@type":"DataDownload",
+        "encodingFormat":"JSON",
+        "contentUrl":"https://github.com/haitian-sun/ConditionalQA/blob/master/v1_0/train.json"
+     },
+     {
+        "@type":"DataDownload",
+        "encodingFormat":"JSON",
+        "contentUrl":"https://github.com/haitian-sun/ConditionalQA/blob/master/v1_0/dev.json"
+     },
+     {
+        "@type":"DataDownload",
+        "encodingFormat":"JSON",
+        "contentUrl":"https://github.com/haitian-sun/ConditionalQA/blob/master/v1_0/test_no_answer.json"
+     },
+     {
+        "@type":"DataDownload",
+        "encodingFormat":"JSON",
+        "contentUrl":"https://github.com/haitian-sun/ConditionalQA/blob/master/v1_0/documents.json"
+     }
+  ]
+}
+</script>
+
+  </head>
+
+  <body>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">ConditionalQA</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href=".">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=".">Explorer</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/home.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>ConditionalQA</h1>
+          <span class="subheading">A Dataset for Complex Questions with Conditional Answers</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+<!-- Main Content -->
+<div class="container" id="main">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="list-group">
+        <div class="list-group-item"><h4>What is ConditionalQA?</h4>
+        <p>ConditionalQA is a question answering dataset featuring complex questions with conditional answers, i.e. answers are only applicable if certain conditions apply. Questions require compositional logical reasoning and are extremely challenging. This dataset is collected by the team at <a href="https://www.ml.cmu.edu">Carnegie Mellon University</a>.</p>
+        <p>For more details about ConditionalQA, please refer to our paper:</p>
+        <p class="text-center">
+          <a href="https://arxiv.org/abs/2110.06884"><button type="button" class="btn btn-info">ConditionalQA (Sun et al. 2021)</button></a>
+        </p>
+        </div>
+        <div class="list-group-item"><h4>Getting started</h4>
+        <p>ConditionalQA is distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>. The training, development, and test (no answer) sets can be downloaded below. Questions are associated with provided documents. The URL is the unique identifier for a document.</p>
+        <p class="text-center">
+          <a href="https://github.com/haitian-sun/ConditionalQA/blob/master/v1_0/train.json"><button type="button" class="btn btn-secondary">Training set</button></a>
+        </p>
+        <p class="text-center">
+          <a href="https://github.com/haitian-sun/ConditionalQA/blob/master/v1_0/dev.json"><button type="button" class="btn btn-secondary">Dev set</button></a>
+        </p>
+        <p class="text-center">
+          <a href="https://github.com/haitian-sun/ConditionalQA/blob/master/v1_0/test_no_answer.json"><button type="button" class="btn btn-secondary">Test set (no answer)</button></a>
+        </p>
+        <p class="text-center">
+          <a href="https://github.com/haitian-sun/ConditionalQA/blob/master/v1_0/documents.json"><button type="button" class="btn btn-success">Documents</button></a>
+        </p>
+        <br>
+        <p>
+        You can evaluate your results with the official evaluation script:
+        </p>
+        <p>
+          <code>python evaluate.py --pred_file=PRED_FILE --ref_file=REF_FILE</code>
+        </p>
+        <p class="text-center">
+          <a href="https://github.com/haitian-sun/ConditionalQA/blob/master/evaluate.py"><button type="button" class="btn btn-secondary">Evaluation script</button></a>
+        </p>
+        <p class="text-center">
+          <a href="https://github.com/haitian-sun/ConditionalQA/blob/master/sample_output.json"><button type="button" class="btn btn-secondary">Sample output</button></a>
+        </p>
+        </div>
+
+        <div class="list-group-item"><h4>Submission</h4>
+          <p>To evaluate your predictions on the official test sets, please submit your predictions to the Codalab competition.</p>
+        <p class="text-center">
+          <a href="https://competitions.codalab.org/competitions/35824"><button type="button" class="btn btn-info">Codalab competition</button></a>
+        </p>
+        <p>Please email your Codalab results to us if you would like your model added to the leaderboard. Please include your model name, your organization, a link to your paper, and your open-sourced codes if applicable. The email address is <a href=".">[username]@cs.cmu.edu</a> where the username is "haitians".</p>
+        </div>
+
+        <div class="list-group-item"><h4>Stay connected!</h4>
+        <p>If you have any questions or comments on ConditionalQA, please email the first author of the paper. If you use ConditionalQA in your research, please cite our paper with the following BibTeX entry.</p>
+        <pre>
+@misc{sun2021conditionalqa,
+  title={ConditionalQA: A Complex Reading Comprehension Dataset with Conditional Answers}, 
+  author={Haitian Sun and William W. Cohen and Ruslan Salakhutdinov},
+  year={2021},
+  eprint={2110.06884},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL}
+}</pre>
+        <p>Thank you and have fun!</p>
+    </div>
+  </div>
+</div>
+<div class="col-lg-8">
+  <div class="card card-outline-secondary">
+    <div class="card-header">
+      Leaderboard
+    </div>
+    <div class="card-body">
+      <!-- In the <em>distractor</em> setting, a question-answering system reads 10 paragraphs to provide an answer (Ans) to a question. They must also justify these answers with supporting facts (Sup). -->
+      <table class="table table-responsive">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" rowspan=3></th>
+            <th scope="col" rowspan=3 class="align-middle text-center">Model</th>
+            <th scope="col" rowspan=3 class="align-middle text-center">Code</th>
+            <th scope="col" colspan=4 class='text-center'>Conditional Questions</th>
+            <th scope="col" colspan=4 class='text-center'>All Questions</th>
+          </tr>
+          <tr>
+            <th scope="col" colspan=2 class='text-center'>Answers</th>
+            <th scope="col" colspan=2 class='text-center'>w. conditions</th>
+            <th scope="col" colspan=2 class='text-center'>Answers</th>
+            <th scope="col" colspan=2 class='text-center'>w. conditions</th>
+          </tr>
+          <tr>
+            <th scope="col" class='text-center'>EM </th>
+            <th scope="col" class='text-center'>F<sub>1</sub></th>
+            <!-- <th scope="col" class='text-center'>EM w. cond</th>
+            <th scope="col" class='text-center'>F<sub>1</sub> w. cond</th>
+            <th scope="col" class='text-center'>EM </th>
+            <th scope="col" class='text-center'>F<sub>1</sub></th>
+            <th scope="col" class='text-center'>EM w. cond</th>
+            <th scope="col" class='text-center'>F<sub>1</sub> w. cond</th> -->
+            <th scope="col" class='text-center'>EM </th>
+            <th scope="col" class='text-center'>F<sub>1</sub></th>
+            <th scope="col" class='text-center'>EM </th>
+            <th scope="col" class='text-center'>F<sub>1</sub></th>
+            <th scope="col" class='text-center'>EM </th>
+            <th scope="col" class='text-center'>F<sub>1</sub></th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row" class='align-middle text-center'>3<br>
+              <span class="badge badge-secondary">Oct 10, 2021</span></td>
+            <td class='align-middle text-center'>FiD<br/>
+              <span class="affiliation">FAIR</span><br/><a href="https://arxiv.org/pdf/2007.01282.pdf" class="paperlink">(Izacard et al. 2021)</a></td>
+            <td class='align-middle text-center'><div class="crossed"><i class="far fa-file text-danger"></i></div></td>
+            <td class='align-middle text-center'>45.2</td>
+            <td class='align-middle text-center'>49.7</td>
+            <td class='align-middle text-center'>4.7</td>
+            <td class='align-middle text-center'>5.8</td>
+            <td class='align-middle text-center'>44.4</td>
+            <td class='align-middle text-center'>50.8</td>
+            <td class='align-middle text-center'>35.0</td>
+            <td class='align-middle text-center'>40.6</td>
+          </tr>
+          <tr>
+            <td scope="row" class='align-middle text-center'>2<br>
+              <span class="badge badge-secondary">Oct 10, 2021</span></td>
+            <td class='align-middle text-center'>DocHopper<br/>
+              <span class="affiliation">CMU</span><br/><a href="https://arxiv.org/abs/2106.00200" class="paperlink">(Sun et al. 2021)</a></td>
+            <td class='align-middle text-center'><div class="crossed"><i class="far fa-file text-danger"></i></div></td>
+            <td class='align-middle text-center'>42.0</td>
+            <td class='align-middle text-center'>46.4</td>
+            <td class='align-middle text-center'>3.1</td>
+            <td class='align-middle text-center'>3.8</td>
+            <td class='align-middle text-center'>40.6</td>
+            <td class='align-middle text-center'>45.2</td>
+            <td class='align-middle text-center'>31.9</td>
+            <td class='align-middle text-center'>36.0</td>
+          </tr>
+          <tr>
+            <td scope="row" class='align-middle text-center'>1<br>
+              <span class="badge badge-secondary">Oct 10, 2021</span></td>
+            <td class='align-middle text-center'>ETC-pipeline<br/>
+              <span class="affiliation">Google Research</span><br/><a href="https://arxiv.org/pdf/2004.08483.pdf" class="paperlink">(Ainslie et al. 2020)</a></td>
+            <td class='align-middle text-center'><div class="crossed"><i class="far fa-file text-danger"></i></div></td>
+            <td class='align-middle text-center'>39.4</td>
+            <td class='align-middle text-center'>41.8</td>
+            <td class='align-middle text-center'>2.5</td>
+            <td class='align-middle text-center'>3.4</td>
+            <td class='align-middle text-center'>35.6</td>
+            <td class='align-middle text-center'>39.8</td>
+            <td class='align-middle text-center'>26.9</td>
+            <td class='align-middle text-center'>30.8</td>
+          </tr>
+          <tr></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<hr>
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p class="copyright text-muted">Copyright &copy; ConditionalQA Team, 2021-2022.</p>
+        <p class="copyright text-muted">Theme adapted from Start Bootstrap's <a href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> template and <a href="https://hotpotqa.github.io">HotpotQA</a>.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/clean-blog.min.js"></script>
+
+
+</body>
+
+</html>
